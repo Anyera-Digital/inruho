@@ -35,6 +35,10 @@ a:hover {
   width: 100%;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .btn {
   padding: 0 25px;
   width: 100%;
@@ -276,4 +280,61 @@ a:hover {
   margin-top: 24px;
   font-size: 14px;
   font-weight: 700;
+}
+
+/*** Menu ***/
+.menu {
+  transform: translateX(-100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 70px 90px;
+  height: 100%;
+  max-width: 600px;
+  width: 100%;
+  background: #fff;
+  border-right: 15px solid #ffe207;
+  transition: .2s ease;
+}
+
+.menu-open .menu-wrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, .2);
+}
+
+.menu-open .menu {
+  transform: translateX(0);
+}
+
+.menu__close {
+  position: absolute;
+  display: flex;
+  top: 45px;
+  right: 56px;
+  color: #afafaf;
+  cursor: pointer;
+}
+
+.menu-details__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.menu-details__title {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.menu-details__text {
+  font-weight: 700;
+}
+
+.menu__decor {
+  position: absolute;
+  bottom: 44px;
+  left: 128px;
+  color: #331615;
 }
