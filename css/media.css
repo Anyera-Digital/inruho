@@ -1,0 +1,110 @@
+@media (max-width: 389px) {
+  .radio:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 390px) {
+  .form__group--radio {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo__img {
+    width: 120px;
+  }
+
+  .logo__subtitle,
+  .page-subtitle,
+  .timer__label,
+  .form__input,
+  .btn,
+  .menu-details__title,
+  .menu-details__text,
+  .form__message,
+  .radio__name {
+    font-size: 14px;
+  }
+
+  .page-title,
+  .timer__value {
+    font-size: 60px;
+  }
+
+  .timer {
+    gap: 60px;
+    margin: 30px 0;
+  }
+
+  .form-section__description {
+    font-size: 18px;
+  }
+
+  .form__group {
+    margin-bottom: 15px;
+  }
+
+  .form__group--radio {
+   gap: 15px;
+  }
+
+  .social {
+    margin-top: 44px;
+  }
+
+  .menu {
+    padding: 70px 90px;
+    border-width: 15px;
+  }
+
+  .menu__decor {
+    bottom: 45px;
+    left: 112px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu__decor {
+    right: 48px;
+    bottom: 15px;
+    left: auto;
+  }
+}
+
+@media (min-width: 1920px) {
+  .logo__img {
+    width: 150px;
+  }
+
+  .logo__subtitle,
+  .page-subtitle,
+  .timer__label {
+    font-size: 18px;
+  }
+
+  .page-title,
+  .timer__value {
+    font-size: 80px;
+  }
+
+  .timer {
+    gap: 80px;
+    margin: 54px 0 42px;
+  }
+
+  .social {
+    margin-top: 55px;
+  }
+
+  .menu__close {
+    top: 45px;
+    right: 56px;
+  }
+
+  .menu__decor {
+    bottom: 44px;
+    left: 128px;
+  }
+}
