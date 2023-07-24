@@ -155,6 +155,19 @@ a:hover {
   max-width: 435px;
 }
 
+.form__message {
+  text-align: right;
+  font-size: 12px;
+}
+
+.form__message--success {
+  color: #279a27;
+}
+
+.form__message--error {
+  color: #ff0000;
+}
+
 .form__group {
   margin-bottom: 15px;
 }

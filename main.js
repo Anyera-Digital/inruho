@@ -5,11 +5,37 @@ $('.radio__input').on('click', function () {
 });
 
 /*** Subscribe ***/
-$('.js-subscribe').on('submit', function (e) {
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzKNm8F-XTW8I7D94C1Z3xJU3E5xIQQUUwzvTGUuHMGwAzPM-bpa9A81kJ8DcKUZSNf/exec'
+const form = document.forms['subscribe-form'];
+
+form.addEventListener('submit', e => {
   e.preventDefault();
 
-  console.log('submit subscribe form');
-});
+  fetch(scriptURL, { method: 'POST', mode: "no-cors", body: new FormData(form)})
+      .then(response => {
+        e.target.reset();
+
+        $('.radio').removeClass('btn--bg-radio');
+        $('.radio:first').addClass('btn--bg-radio');
+        $('.form__message').addClass('form__message--success');
+        $('.form__message').html('Подписка оформлена успешно');
+
+
+        setTimeout(() => {
+          $('.form__message').html('');
+          $('.form__message').removeClass('form__message--success');
+        }, 3000);
+      })
+      .catch(error => {
+        $('.form__message').addClass('form__message--error');
+        $('.form__message').html(error.message);
+
+        setTimeout(() => {
+          $('.form__message').html('');
+          $('.form__message').removeClass('form__message--error');
+        }, 3000);
+      })
+})
 
 /*** Menu ***/
 // Open menu

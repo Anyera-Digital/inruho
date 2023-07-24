@@ -93,19 +93,22 @@
     <section class="form-section">
       <p class="form-section__description">Подпишись на наши обновления, чтобы быть вкурсе событий</p>
     
-      <form class="js-subscribe form">
+      <form class="form" name="subscribe-form">
+        <p class="form__message"></p>
+        
         <div class="form__group">
-          <input class="form__input" type="text" placeholder="youremail@gmail.com">
+          <input class="form__input" name="email" type="text" placeholder="youremail@gmail.com" minlength="5"
+                 maxlength="50" autocomplete="off" autofocus required>
         </div>
       
         <div class="form__group form__group--radio">
           <label class="radio btn--bg-radio">
-            <input class="radio__input" type="radio" name="user-role" checked>
+            <input class="radio__input" type="radio" name="role" value="Арендодатель" checked>
             <span class="radio__name">Арендодатель</span>
           </label>
         
           <label class="radio">
-            <input class="radio__input" type="radio" name="user-role">
+            <input class="radio__input" type="radio" name="role" value="Путешественник">
             <span class="radio__name">Путешественник</span>
           </label>
         </div>
